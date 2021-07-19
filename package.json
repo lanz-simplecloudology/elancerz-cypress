@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cy:open": "npx cypress open",
-    "cy:run": "npm cypress open"
+    "cy:run": "npm cypress run"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,11 @@
     "url": "https://github.com/lanz-simplecloudology/elancerz-cypress/issues"
   },
   "homepage": "https://github.com/lanz-simplecloudology/elancerz-cypress#readme",
+  "devDependencies": {
+    "cypress-xpath": "^1.6.2"
+  },
   "dependencies": {
-    "cypress": "^7.7.0"
+    "cypress": "^7.7.0",
+    "cypress-real-events": "^1.5.0"
   }
 }

@@ -1,1 +1,13 @@
-{}
+{
+  "chromeWebSecurity": false,
+  "video": true,
+  "videosFolder": "cypress/videos",
+  "viewportWidth": 1920,
+  "viewportHeight": 1080,
+  "retries": {
+    "runMode": 2,
+    "openMode": 2
+  },
+  "defaultCommandTimeout": 20000,
+  "downloadsFolder": "cypress/downloads"
+}
