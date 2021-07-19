@@ -4,7 +4,8 @@
   "description": "Cypress Automation for Elancerz",
   "main": "index.js",
   "scripts": {
-    "cy:open": "npx cypress open"
+    "cy:open": "npx cypress open",
+    "cy:run": "npm cypress open"
   },
   "repository": {
     "type": "git",
