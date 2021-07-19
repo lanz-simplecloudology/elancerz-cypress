@@ -1,0 +1,19 @@
+{
+  "name": "elancerz",
+  "version": "1.0.0",
+  "description": "Cypress Automation for Elancerz",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lanz-simplecloudology/elancerz-cypress.git"
+  },
+  "author": "Lanz Gementiza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lanz-simplecloudology/elancerz-cypress/issues"
+  },
+  "homepage": "https://github.com/lanz-simplecloudology/elancerz-cypress#readme"
+}
