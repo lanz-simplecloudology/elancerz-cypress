@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/lanz-simplecloudology/elancerz-cypress/issues"
   },
-  "homepage": "https://github.com/lanz-simplecloudology/elancerz-cypress#readme"
+  "homepage": "https://github.com/lanz-simplecloudology/elancerz-cypress#readme",
+  "dependencies": {
+    "cypress": "^7.7.0"
+  }
 }
