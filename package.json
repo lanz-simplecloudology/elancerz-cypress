@@ -6,7 +6,7 @@
   "scripts": {
     "cy:open": "npx cypress open",
     "cy:run": "npm cypress run",
-    "cy:git": "npx cypress run --spec cypresss/integration/CI/*-spec.js --env user=$USERNAME,password=$PASSWORD"
+    "cy:git": "npx cypress run --spec cypress/integration/CI/*-spec.js --env user=$USERNAME,password=$PASSWORD"
   },
   "repository": {
     "type": "git",
