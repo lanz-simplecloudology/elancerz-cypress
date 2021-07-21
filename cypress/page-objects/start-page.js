@@ -30,8 +30,8 @@ export class StartPage {
     cy.visit("https://stg.elancerz.com/");
     this.login.click();
 
-    this.userNameField.type(Cypress.env("env.user"));
-    this.passwordField.type(Cypress.env("env.password"), "log:false");
+    this.userNameField.type(Cypress.env("user"));
+    this.passwordField.type(Cypress.env("password"), "log:false");
     this.signInButton.click();
   }
 }
