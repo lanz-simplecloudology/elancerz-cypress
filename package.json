@@ -6,7 +6,7 @@
   "scripts": {
     "cy:open": "npx cypress open",
     "cy:run": "npm cypress run",
-    "cy:git": "npm cypress run --env=$GIT_ENV_CREDS"
+    "cy:git": "npx cypress run --env=$GIT_ENV_CREDS"
   },
   "repository": {
     "type": "git",
