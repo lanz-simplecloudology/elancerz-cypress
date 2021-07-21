@@ -10,11 +10,37 @@ export class StartPage {
     return cy.xpath('//button[contains(text(), "LogIn")]');
   }
 
+  get userNameField() {
+    return cy.xpath('//input[@name="login"]');
+  }
+
+  get passwordField() {
+    return cy.xpath('//input[@type="password"]');
+  }
+
+  get signInButton() {
+    return cy.xpath('//button[@type="submit"]');
+  }
+
   /**************************
    TEST-ACTIONS 
   **************************/
 
-  clickLoginButton() {
+  normalLogin(user, password) {
+    cy.visit("https://stg.elancerz.com/");
     this.login.click();
+
+    this.userNameField.type(user);
+    this.passwordField.type(password, "log:false");
+    this.signInButton.click();
+  }
+
+  GITnormalLogin(user, password) {
+    cy.visit("https://stg.elancerz.com/");
+    this.login.click();
+
+    this.userNameField.type(user);
+    this.passwordField.type(password, "log:false");
+    this.signInButton.click();
   }
 }

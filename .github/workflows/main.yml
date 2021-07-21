@@ -1,0 +1,24 @@
+name: Cypress - PR SMOKE TEST
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: npm install
+
+      - name: Checkout Dev Repo
+        uses: actions/checkout@v2
+
+      - name: Run test
+        uses: cypress-io/github-action@v2
+
+        with:
+          command: npm run cy:git
+
+        env:
+          GIT_ENV_CREDS: ${{ secrets.GIT_ENV_CREDS }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -9,5 +9,8 @@
     "openMode": 2
   },
   "defaultCommandTimeout": 20000,
-  "downloadsFolder": "cypress/downloads"
+  "downloadsFolder": "cypress/downloads",
+  "env": {
+    "secrets": "$GIT_ENV_CREDS"
+  }
 }
