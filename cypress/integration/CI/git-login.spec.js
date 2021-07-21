@@ -6,7 +6,7 @@ Scope: Login in UI
 Note: 
 ****************************************************************/
 
-import { StartPage } from "../page-objects/start-page";
+import { StartPage } from "../../page-objects/start-page";
 
 context("login via UI", () => {
   it("login to UI", () => {
@@ -14,6 +14,6 @@ context("login via UI", () => {
     var user = "Cypress.env('env.user')";
     var password = "Cypress.env('env.password')";
 
-    startPage.GITnormalLogin(user, password);
+    startPage.LoginUI(user, password);
   });
 });

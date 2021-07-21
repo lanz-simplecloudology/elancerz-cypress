@@ -26,21 +26,12 @@ export class StartPage {
    TEST-ACTIONS 
   **************************/
 
-  normalLogin(user, password) {
+  LoginUI() {
     cy.visit("https://stg.elancerz.com/");
     this.login.click();
 
-    this.userNameField.type(user);
-    this.passwordField.type(password, "log:false");
-    this.signInButton.click();
-  }
-
-  GITnormalLogin(user, password) {
-    cy.visit("https://stg.elancerz.com/");
-    this.login.click();
-
-    this.userNameField.type(user);
-    this.passwordField.type(password, "log:false");
+    this.userNameField.type(Cypress.env("env.user"));
+    this.passwordField.type(Cypress.env("env.password"), "log:false");
     this.signInButton.click();
   }
 }

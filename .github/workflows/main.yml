@@ -1,7 +1,7 @@
 name: Cypress - PR SMOKE TEST
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
   test:
@@ -13,17 +13,14 @@ jobs:
       - name: Checkout Dev Repo
         uses: actions/checkout@v2
 
-      - name: Secret Parser
-        uses: jwsi/secret-parser@v1
-
-        with:
-          filename: test.json
-          secret-name: important_value
-          secret-value: ${{ secrets.important_value }}
-
       - name: Run Test
 
         uses: cypress-io/github-action@v2
 
         with:
           command: npm run cy:git
+
+        env:
+          USERNAME: ${{ secrets.USERNAME }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
