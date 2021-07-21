@@ -18,7 +18,7 @@ jobs:
         uses: cypress-io/github-action@v2
 
         with:
-          command: npm run cy:git
+          command: npm run git:stg
 
         env:
           USERNAME: ${{ secrets.USERNAME }}

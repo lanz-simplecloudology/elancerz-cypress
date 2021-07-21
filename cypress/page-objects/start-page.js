@@ -27,7 +27,7 @@ export class StartPage {
   **************************/
 
   LoginUI() {
-    cy.visit("https://stg.elancerz.com/");
+    cy.visit(Cypress.env("url"));
     this.login.click();
 
     this.userNameField.type(Cypress.env("user"));
