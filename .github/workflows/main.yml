@@ -13,18 +13,18 @@ jobs:
       - name: Checkout Dev Repo
         uses: actions/checkout@v2
 
-      - name: Run test
+      - name: Parse
 
         uses: jwsi/secret-parser@v1
-        
+
         with:
           filename: test.json
           secret-name: important_value
           secret-value: ${{ secrets.important_value }}
-        
+
+      - name: Run Test
+
         uses: cypress-io/github-action@v2
 
         with:
           command: npm run cy:git
-
-        
