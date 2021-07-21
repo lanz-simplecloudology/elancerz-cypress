@@ -12,6 +12,38 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
+const FS = require("fs-extra");
+const PATH = require("path");
+
+// This is used for calling the config file
+function getConfigurationByFile(file, roletype) {
+  const pathToConfigFile = PATH.resolve(
+    "cypress",
+    "config/" + web,
+    `${file}.json`
+  );
+  if (!FS.existsSync(pathToConfigFile)) {
+    return {
+      // return empty
+    };
+  }
+
+  return new Promise(function (res) {
+    if (roletype == "mycrm") {
+      try {
+        FS.readJson(pathToConfigFile, (err, obj) => {
+          if (err) throw err;
+          res(obj[country][roletype]);
+        });
+      } catch (err) {
+        res(err);
+      }
+    } else {
+      res(err);
+    }
+  });
+}
+
 /**
  * @type {Cypress.PluginConfig}
  */
@@ -19,4 +51,10 @@
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
-}
+
+  const CLIPBOARDY = require("clipboardy");
+  const FILE = config.env.configFile;
+  const ROLETYPE = config.env.roletype;
+
+  return getConfigurationByFile(FILE, ROLETYPE);
+};
