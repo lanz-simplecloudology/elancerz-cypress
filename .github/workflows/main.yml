@@ -13,8 +13,7 @@ jobs:
       - name: Checkout Dev Repo
         uses: actions/checkout@v2
 
-      - name: Parse
-
+      - name: Secret Parser
         uses: jwsi/secret-parser@v1
 
         with:
