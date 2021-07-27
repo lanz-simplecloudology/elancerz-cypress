@@ -10,7 +10,7 @@
     "run:dev": "npx cypress run --config-file cypress/config/dev.json --spec cypress/integration/e2e/**/*",
     "open:stg": "npx cypress open --config-file cypress/config/stg.json",
     "open:dev": "npx cypress open --config-file cypress/config/dev.json",
-    "git:stg": "npx cypress run --spec cypress/integration/CI/**/*",
+    "git:stg": "npx cypress run --spec cypress/integration/CI/**/* configFile=git",
     "dev:stg": "npx cypress run --spec cypress/integration/CI/**/* --env user=$USERNAME,password=$PASSWORD,url=https://dev.elancerz.com"
   },
   "repository": {

@@ -28,7 +28,3 @@ jobs:
 
         with:
           command: npm run git:stg
-
-        env:
-          secret-value: ${{ secrets.important_value }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
