@@ -13,6 +13,15 @@ jobs:
       - name: Checkout Dev Repo
         uses: actions/checkout@v2
 
+      - name: Parse env variables to json
+
+        uses: jwsi/secret-parser@v1
+
+        with:
+          filename: test.json
+          secret-name: important_value
+          secret-value: ${{ secrets.important_value }}
+
       - name: Run Test
 
         uses: cypress-io/github-action@v2
@@ -21,6 +30,5 @@ jobs:
           command: npm run git:stg
 
         env:
-          USERNAME: ${{ secrets.USERNAME }}
-          PASSWORD: ${{ secrets.PASSWORD }}
+          secret-value: ${{ secrets.important_value }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

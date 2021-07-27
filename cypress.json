@@ -9,5 +9,6 @@
     "openMode": 2
   },
   "defaultCommandTimeout": 20000,
-  "downloadsFolder": "cypress/downloads"
+  "downloadsFolder": "cypress/downloads",
+  "env": { "test": "test" }
 }
