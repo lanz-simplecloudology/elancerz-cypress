@@ -1,7 +1,5 @@
 node_modules
 cypress\downloads
 cypress\videos
-cypress\config
-
-cypress/config/dev.json
-cypress/config/stg.json
+cypress\config\dev.json
+cypress\config\stg.json

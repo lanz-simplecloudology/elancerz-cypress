@@ -18,7 +18,7 @@ jobs:
         uses: jwsi/secret-parser@v1
 
         with:
-          filename: test.json
+          filename: cypress/config/test.json
           secret-name: important_value
           secret-value: ${{ secrets.important_value }}
 
