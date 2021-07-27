@@ -18,7 +18,7 @@ function getConfigurationByFile(file) {
 // plugins file
 module.exports = (on, config) => {
   // accept a configFile value or use development by default
-  const file = path.resolve("cypress");
+  const file = config.env.configFile || "stg";
 
   return getConfigurationByFile(file);
 };

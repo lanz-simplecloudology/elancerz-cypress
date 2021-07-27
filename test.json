@@ -1,3 +1,0 @@
-{
-  "important_value" : "${{ secrets.important_value }}"
-}

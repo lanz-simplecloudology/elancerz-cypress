@@ -6,11 +6,11 @@
   "scripts": {
     "cy:open": "npx cypress open",
     "cy:run": "npm cypress run",
-    "run:stg": "npx cypress run --config-file cypress/config/stg.json --spec cypress/integration/e2e/**/*",
-    "run:dev": "npx cypress run --config-file cypress/config/dev.json --spec cypress/integration/e2e/**/*",
-    "open:stg": "npx cypress open --config-file cypress/config/stg.json",
-    "open:dev": "npx cypress open --config-file cypress/config/dev.json",
-    "git:stg": "npx cypress run --spec cypress/integration/CI/**/* configFile=git",
+    "run:stg": "npx cypress run --spec cypress/integration/e2e/**/* --env configFile=stg",
+    "run:dev": "npx cypress run --spec cypress/integration/e2e/**/* --env configFile=dev",
+    "open:stg": "npx cypress open --env configFile=stg",
+    "open:dev": "npx cypress open --env configFile=dev",
+    "git:stg": "npx cypress run --spec cypress/integration/CI/**/* --env user=$USERNAME,password=$PASSWORD,url=https://stg.elancerz.com",
     "dev:stg": "npx cypress run --spec cypress/integration/CI/**/* --env user=$USERNAME,password=$PASSWORD,url=https://dev.elancerz.com"
   },
   "repository": {
